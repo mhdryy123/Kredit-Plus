@@ -1,0 +1,204 @@
+/* assets/css/custom.css */
+/* Custom styles for Sistem Kredit */
+
+/* Dashboard Specific Styles */
+.dashboard-welcome {
+    background: linear-gradient(135deg, var(--secondary) 0%, #2980b9 100%);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.dashboard-stats .card {
+    border-radius: 0.5rem;
+}
+
+/* Login Page Styles */
+.login-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+}
+
+.login-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    border: none;
+}
+
+/* Table Actions */
+.table-actions .btn {
+    margin: 0 2px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Status Indicators */
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.status-pending { background: var(--warning); }
+.status-approved { background: var(--success); }
+.status-rejected { background: var(--danger); }
+.status-completed { background: var(--info); }
+
+/* Calculator Styles */
+.calculator-section {
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.calculator-result {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border-left: 4px solid var(--success);
+}
+
+/* Profile Page */
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    margin: 0 auto 1rem;
+}
+
+/* Admin Panel Specific */
+.admin-panel .sidebar {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 56px);
+    z-index: 1000;
+}
+
+.admin-panel .main-content {
+    margin-left: 250px;
+}
+
+@media (max-width: 768px) {
+    .admin-panel .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    
+    .admin-panel .main-content {
+        margin-left: 0;
+    }
+}
+
+/* Chart Containers */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Notification Badge */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--danger);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Steps */
+.form-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form-steps::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e9ecef;
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    flex: 1;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.step.active .step-number {
+    background: var(--secondary);
+    color: white;
+}
+
+.step.completed .step-number {
+    background: var(--success);
+    color: white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
+
+/* Print Optimization */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-break {
+        page-break-after: always;
+    }
+}
